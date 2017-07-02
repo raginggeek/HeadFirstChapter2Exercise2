@@ -26,5 +26,29 @@ namespace HeadFirstChapter2Exercise2
         {
             this.InitializeComponent();
         }
+
+        private void textChanger_Click(object sender, RoutedEventArgs e)
+        {
+            if (enableCheckBox.IsChecked == true)
+            {
+                if (labelToChange.HorizontalAlignment == HorizontalAlignment.Center 
+                    || labelToChange.HorizontalAlignment == HorizontalAlignment.Right)
+                {
+                    labelToChange.HorizontalAlignment = HorizontalAlignment.Left;
+                    labelToChange.Text = "Left";
+                }
+                else
+                {
+                    labelToChange.HorizontalAlignment = HorizontalAlignment.Right;
+                    labelToChange.Text = "Right";
+                }
+
+            }
+            else
+            {
+                labelToChange.Text = "Text changing is disabled";
+                labelToChange.HorizontalAlignment = HorizontalAlignment.Center;
+            }
+        }
     }
 }
